@@ -1,0 +1,97 @@
+.restourant {
+    overflow: hidden;
+    width: 100%;
+    margin-bottom: clampFluid(80, 227);
+
+    &__cont {
+        padding-left: clampFluid(82);
+        display: flex;
+        justify-content: space-between;
+        width: auto;
+
+        @media (max-width: 1280px) {
+            padding-left: clampFluid(10, 30, 320, 1280);
+            padding-top: 0;
+        }
+
+        @media (max-width: 768px) {
+            flex-direction: column;
+            padding-right: clampFluid(10, 30, 320, 1280);
+        }
+    }
+
+    &__info {
+        display: flex;
+        flex-direction: column;
+        padding-top: clampFluid(30);
+        width: clampFluid(418);
+
+        @media (max-width: 1280px) {
+            width: 50%;
+            padding-top: 0;
+        }
+
+        @media (max-width: 768px) {
+            width: 100%;
+            margin-bottom: 188px;
+        }
+
+    }
+
+    &__title {
+        @include h1;
+        margin-bottom: clampFluid(4, 28);
+    }
+
+    &__text {
+        display: flex;
+        flex-direction: column;
+        gap: clampFluid(4, 18);
+        margin-bottom: clampFluid(30, 47);
+
+        p {
+            @include p1;
+            color: rgba(76, 78, 72, 0.7);
+        }
+    }
+
+    &__images {
+        position: relative;
+        width: clampFluid(950);
+        height: clampFluid(581);
+
+        img {
+            border-radius: 8px;
+        }
+        @media (max-width: 1280px) {
+            width: 100%;
+            height: auto;
+        }
+    }
+
+    &__img-left {
+        z-index: -1;
+        position: absolute;
+        height: clampFluid(581) !important;
+        width: clampFluid(530) !important;
+        bottom: clampFluid(-4);
+        left: clampFluid(-431);
+
+        @media (max-width: 1280px) {
+            display: none;
+        }
+        @media (max-width: 768px) {
+            display: block;
+            width: 275px !important;
+            height: 374px !important;
+            bottom: unset;
+            top: clampFluid(-334,-390,320,768);
+            left: unset;
+            right:clampFluid(-66,-12,320,768);
+        }
+    }
+
+    &__img-right {
+        object-fit: cover !important;
+    }
+}

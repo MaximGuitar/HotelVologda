@@ -1,0 +1,19 @@
+.content-image {
+  margin-bottom: clampFluid(60);
+
+  img {
+    max-width: 100%;
+    width: 100%;
+    height: clampFluid(724);
+    margin-bottom: clampFluid(16);
+    border-radius: 8px;
+
+    @media (max-width: 1280px) {
+      height: clampFluid(230, 600);
+    }
+  }
+
+  &__descr {
+    @include p1;
+  }
+}

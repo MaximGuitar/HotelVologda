@@ -1,0 +1,51 @@
+@import "./scss/base/variables.scss";
+@import "./scss/base/functions.scss";
+@import "./scss/base/fonts.scss";
+@import "./scss/base/reset.scss";
+@import "./scss/base/utils.scss";
+
+@import "./scss/header.scss";
+@import "./scss/footer.scss";
+
+@import "./scss/forms/forms.scss";
+@import "./scss/forms/row-input.scss";
+@import "./scss/forms/dropdown-list.scss";
+@import "./scss/forms/modal.scss";
+@import "./scss/forms/default-form-colors.scss";
+@import "./scss/forms/custom-checkbox.scss";
+@import "./scss/forms/password-input.scss";
+
+@import "./scss/text-page/text-page.scss";
+@import "./scss/text-page/content-block.scss";
+@import "./scss/text-page/content-text.scss";
+@import "./scss/text-page/content-text-image.scss";
+@import "./scss/text-page/content-image.scss";
+@import "./scss/text-page/content-gallery.scss";
+@import "./scss/text-page/content-quote.scss";
+@import "./scss/text-page/content-file-row.scss";
+
+//Компоненты
+@import "./scss/components/start-banner.scss";
+@import "./scss/components/quote-block.scss";
+@import "./scss/components/room-card.scss";
+@import "./scss/components/rooms-section.scss";
+@import "./scss/components/hover-slider.scss";
+@import "./scss/components/special-offers.scss";
+@import "./scss/components/discount-form.scss";
+@import "./scss/components/aboutHotel.scss";
+@import "./scss/components/our-advantages.scss";
+@import "./scss/components/B2Bsolutions.scss";
+@import "./scss/components/services.scss";
+@import "./scss/components/restouran.scss";
+@import "./scss/components/news-block.scss";
+@import "./scss/components/reviews-block.scss";
+@import "./scss/components/whereAreWe.scss";
+@import "./scss/components/about-hotel-section.scss";
+@import "./scss/components/seeAllPhoto.scss";
+@import "./scss/components/seoblock.scss";
+@import "./scss/components/menu.scss";
+@import "./scss/components/room.scss";
+@import "./scss/components/404.scss";
+@import "./scss/components/gallery-section.scss";
+@import "./scss/components/detailpage.scss";
+@import "./scss/components/openCallbackModal.scss";

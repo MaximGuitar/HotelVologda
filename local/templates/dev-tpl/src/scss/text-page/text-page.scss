@@ -1,0 +1,33 @@
+.text-page {
+  margin: clampFluid(15, 35) 0 clampFluid(30, 150);
+}
+
+.content-slider {
+  margin-bottom: clampFluid(60, 160);
+
+  &__img {
+    border-radius: 8px;
+    width: 100%;
+    height: 100%;
+  }
+
+  &__pagintaion {
+    margin-left: clampFluid(35);
+    @include h3;
+  }
+  .swiper-wrapper{
+    margin-bottom: clampFluid(30);
+  }
+
+  &__bottom {
+    display: flex;
+    align-items: center;
+    color: rgba(76, 78, 72, 0.3);
+    .swiper-pagination-total {
+    
+    }
+    .swiper-pagination-current{
+      color: $black;
+    }
+  }
+}

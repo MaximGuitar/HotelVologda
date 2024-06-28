@@ -1,0 +1,51 @@
+.content-files {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: clampFluid(15, 30);
+  margin-bottom: clampFluid(60,150);
+
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr;
+  }
+
+  &__elem {
+    padding: clampFluid(10, 20);
+    border: 1px solid transparent;
+    border-radius: 8px;
+    transition: $transition-fast; 
+    display: flex;
+    flex-direction: column;
+
+
+    &:hover {
+      border-color: $green;
+
+      .content-files__elem-name {
+        color: $green;
+      }
+    }
+  }
+
+  &__elem-name {
+    @include p1;
+    margin-bottom: clampFluid(10, 20);
+  }
+
+  &__elem-icon {
+    width: clampFluid(39);
+    height: clampFluid(43);
+    margin-right: clampFluid(12);
+  }
+
+  &__elem-meta {
+    @include p2;
+    color: $green;
+  }
+
+  &__elem-bottom {
+    margin-top: auto;
+    display: flex;
+    align-items: center;
+  }
+
+}

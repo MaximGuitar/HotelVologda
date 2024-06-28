@@ -1,0 +1,14 @@
+.content-block {
+  &:not(:last-child) {
+    margin-bottom: clampFluid(30,100);
+  }
+  @media (max-width: 1279px) {
+    &:not(:last-child) {
+      margin-bottom: clampFluid(20,50);
+    }
+  }
+}
+.share-url{
+  margin-bottom: clampFluid(70,201);
+
+}

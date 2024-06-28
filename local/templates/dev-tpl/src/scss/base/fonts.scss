@@ -1,0 +1,132 @@
+@font-face {
+  font-family: 'BebasNeue';
+  src: url('/src/scss/base/fonts/BebasNeue-Regular.otf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@mixin h0 {
+  font-size: clampFluid(128);
+  line-height: clampFluid(167);
+  font-family: "BebasNeue";
+  font-weight: 400;
+  letter-spacing: 2px;
+  @media (max-width: 1280px) {
+    font-size: clampFluid(59, 128, 320, 1280);
+    line-height: clampFluid(77, 167, 320, 1280);
+  }
+}
+
+@mixin h1 {
+  font-size: clampFluid(90);
+  line-height: clampFluid(95);
+  font-family: "BebasNeue";
+  font-weight: 400;
+  letter-spacing: 2px;
+
+  @media (max-width: 1280px) {
+    font-size: clampFluid(42, 90, 320, 1280);
+    line-height: clampFluid(44, 95, 320, 1280);
+  }
+}
+
+@mixin h2 {
+  font-size: clampFluid(64);
+  line-height: clampFluid(67);
+  font-family: "BebasNeue";
+  font-weight: 400;
+  letter-spacing: 2px;
+  @media (max-width: 1280px) {
+    font-size: clampFluid(30, 64, 320, 1280);
+    line-height: clampFluid(32, 67, 320, 1280);
+  }
+}
+
+@mixin h3 {
+  font-size: clampFluid(40);
+  line-height: clampFluid(52);
+  font-family: "BebasNeue";
+  font-weight: 400;
+
+  @media (max-width: 1280px) {
+    font-size: clampFluid(18, 40, 320, 1280);
+    line-height: clampFluid(19, 52, 320, 1280);
+  }
+}
+
+@mixin h3-long {
+  font-size: clampFluid(40);
+  line-height: clampFluid(52);
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+
+  @media (max-width: 1280px) {
+    font-size: clampFluid(18, 40, 320, 1280);
+    line-height: clampFluid(23, 52, 320, 1280);
+  }
+}
+
+@mixin p1 {
+  font-size: clampFluid(20);
+  line-height: clampFluid(26);
+  font-family: "Roboto",
+    sans-serif;
+  font-weight: 400;
+
+  @media (max-width: 1280px) {
+    font-size: clampFluid(14, 20, 320, 1280);
+    line-height: clampFluid(16, 26, 320, 1280);
+  }
+}
+
+@mixin p2 {
+  font-size: clampFluid(16);
+  line-height: clampFluid(21);
+  font-family: "Roboto",
+    sans-serif;
+  font-weight: 400;
+
+  @media (max-width: 1280px) {
+    font-size: clampFluid(12, 16, 320, 1280);
+    line-height: clampFluid(13, 21, 320, 1280);
+  }
+}
+
+@mixin text1 {
+
+  font-size: r(25);
+  line-height: 1.2;
+  font-family: "Inter", sans-serif;
+
+  @media (max-width: 1279px) {
+    @include mob-text1;
+  }
+}
+
+@mixin mob-text1 {
+  font-size: r(18);
+}
+
+@mixin text2 {
+  font-size: r(20);
+  line-height: 1.3;
+  font-family: "Inter", sans-serif;
+
+  @media (max-width: 1279px) {
+    @include mob-text2;
+  }
+}
+
+@mixin mob-text2 {
+  font-size: r(14);
+}
+
+@mixin caption {
+  font-size: r(18);
+  line-height: 1.3;
+  font-family: "Inter", sans-serif;
+
+  @media (max-width: 1279px) {
+    font-size: r(10);
+  }
+}

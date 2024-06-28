@@ -1,0 +1,66 @@
+.page-404 {
+    background: $green-bg;
+    padding-top: clampFluid(298);
+    padding-bottom: clampFluid(391);
+    position: relative;
+
+    @media (max-width: 768px) {
+        padding-top: clampFluid(200, 298, 320, 768);
+        padding-bottom: clampFluid(100, 391, 320, 768);
+    }
+
+    &__title {
+        @include h1;
+        margin-bottom: clampFluid(30);
+    }
+
+    &__text {
+        @include p1;
+        margin-bottom: clampFluid(49);
+        width: 332px;
+
+        @media (max-width: 500px) {
+            width: 100%;
+        }
+    }
+
+    &__content {
+        z-index: 2;
+    }
+
+    &__cont {
+        position: relative;
+    }
+
+    &__bg-img {
+        position: absolute;
+        z-index: 1;
+        top: clampFluid(56);
+        right: clampFluid(86);
+        width: clampFluid(696);
+        height: clampFluid(523);
+
+        @media (max-width: 768px) {
+            display: none;
+        }
+
+    }
+
+    &__bg-num {
+        font-size: clampFluid(853);
+        line-height: clampFluid(887);
+        font-weight: 700;
+        letter-spacing: 2px;
+        font-family: "BebasNeue";
+        position: absolute;
+        top: clampFluid(-247);
+        left: clampFluid(-7);
+        z-index: 1;
+        color: rgba(76, 78, 72, 0.05);
+
+        @media (max-width: 768px) {
+            font-size: clampFluid(230, 568, 320, 768);
+            line-height: clampFluid(300, 591, 320, 768);
+        }
+    }
+}

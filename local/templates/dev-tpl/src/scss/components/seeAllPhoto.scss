@@ -1,0 +1,49 @@
+.seeAllPhoto {
+    background: $green-bg;
+    padding-top: clampFluid(107);
+    // padding-bottom: clampFluid(122);
+    padding-bottom: clampFluid(30,50);;
+    margin-bottom: clampFluid(141);
+
+    @media (max-width: 1024px) {
+        padding-top: clampFluid(30, 70, 320, 1024);
+        padding-bottom: clampFluid(30, 80, 320, 1024);
+        margin-bottom: 62px;
+    }
+
+    &__descr {
+        display: flex;
+        justify-content: center;
+        margin: 0 auto clampFluid(86);
+
+        p {
+            width: clampFluid(1236);
+            @include h3-long;
+            text-align: center;
+        }
+
+        @media (max-width: 1024px) {
+            padding-right: clampFluid(15, 30, 320, 1024);
+            padding-left: clampFluid(15, 30, 320, 1024);
+        }
+    }
+
+    &__list {
+        margin-bottom: clampFluid(65);
+    }
+
+    &__slide {
+        // width: clampFluid(456) !important;
+        height: clampFluid(323) !important;
+        margin-right: clampFluid(26);
+
+        img {
+            border-radius: 8px;
+            object-fit: cover;
+        }
+    }
+
+    &__seePhoto {
+        justify-content: center;
+    }
+}

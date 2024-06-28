@@ -1,0 +1,222 @@
+.reviews-block {
+    position: relative;
+    background: $green-bg;
+    padding-bottom: clampFluid(41, 104);
+    padding-top: clampFluid(50, 53);
+    margin-bottom: clampFluid(90, 142);
+    overflow: hidden;
+
+
+    &--zeroMargin {
+        margin-bottom: 0;
+    }
+
+    .slider-arrows {
+        margin-bottom: 30px;
+    }
+
+    &__top {
+        display: flex;
+        margin-bottom: clampFluid(20, 40);
+        align-items: end;
+        justify-content: space-between;
+    }
+
+    &__title {
+        p {
+            @include h1;
+        }
+    }
+
+    &__list {
+        margin-bottom: clampFluid(20, 80);
+    }
+
+    &__item {
+        padding: 20px;
+        border-radius: 8px;
+        border: 1px solid rgba(76, 78, 72, 0.2);
+
+        // margin-right: clampFluid(20);
+        // &:last-child{
+        //     margin-right: clampFluid(100) !important;
+        // }
+        @media (max-width: 768px) {
+            margin-right: 0;
+        }
+
+        &:hover {
+            p {
+                transform: skew(0)
+            }
+        }
+    }
+
+    &__item-text {
+        p {
+            @include p1;
+            color: rgba(76, 78, 72, 0.7);
+        }
+    }
+
+    &__swiper {}
+
+    .swiper {
+        overflow: visible !important;
+    }
+
+    &__item-bottomBlock {
+        margin-top: clampFluid(40, 60);
+        display: flex;
+
+        p {
+            @include p1;
+        }
+
+    }
+
+    &__author {
+        margin-right: clampFluid(8, 12);
+    }
+
+    &__date {
+        color: rgba(76, 78, 72, 0.7);
+    }
+
+    &__add {
+        display: flex;
+        align-items: center;
+
+        @media (max-width: 700px) {
+            align-items: start;
+        }
+
+        @include p1;
+
+        p {
+            margin-right: clampFluid(7, 14);
+        }
+    }
+
+    &__messangers {
+        display: flex;
+        gap: 10px;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+
+    &__swiper-blur {
+        background: linear-gradient(270deg, #EAECE5 0%, rgba(234, 236, 229, 0) 100%);
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 10%;
+        height: 100%;
+        z-index: 10;
+
+        @media (max-width:1024px) {
+            display: none;
+        }
+    }
+
+    &__messangers-icon {
+        position: relative;
+        width: auto;
+        height: auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 30px;
+        padding: clampFluid(15);
+        border: 1px solid $green;
+        min-width: clampFluid(55);
+        min-height: clampFluid(55);
+        max-height: 56px;
+
+        // svg {
+        //     fill: $black;
+        //     height: clampFluid(16);
+        // }
+
+        // &:hover {
+        //     background: $green;
+
+        //     svg {
+        //         fill: white;
+        //     }
+
+        // }
+
+        &--copyURL {
+            cursor: pointer;
+
+            svg {
+                fill: transparent;
+                stroke: $black;
+            }
+
+            &:hover {
+                svg {
+                    fill: transparent;
+                    stroke: white;
+                }
+
+            }
+        }
+
+        .popup {
+            left: 12px;
+            bottom: 58px;
+
+            svg {
+                height: 6px;
+            }
+        }
+
+        .reviews-block__main-img {
+            opacity: 1;
+            transition: $transition-fast;
+        }
+
+        .reviews-block__main-hover-img {
+            position: absolute;
+            opacity: 0;
+            transition: $transition-fast;
+        }
+
+        &:hover {
+            .popup {
+                opacity: 1;
+            }
+
+            background: #768254;
+
+            .reviews-block__main-img {
+                opacity: 0;
+            }
+
+            .reviews-block__main-hover-img {
+                opacity: 1;
+            }
+
+        }
+    }
+
+    &__desk {
+        display: flex;
+        z-index: 10;
+
+        @media (max-width: 800px) {
+            display: none;
+        }
+    }
+
+    &__mob {
+        display: flex;
+
+        @media (min-width: 801px) {
+            display: none;
+        }
+    }
+
+}

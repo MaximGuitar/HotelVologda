@@ -1,0 +1,155 @@
+.content-text {
+  h1 {
+    @include h1;
+  }
+
+  h2 {
+    @include h2;
+  }
+
+  h3 {
+    @include h3;
+  }
+
+  i {
+    @include h3-long;
+    font-style: normal;
+    display: block;
+  }
+
+  h1,
+  h2,
+  h3,
+  i {
+    color: $black;
+    margin: r(50) 0 r(20);
+  }
+
+  p {
+    margin-bottom: r(16);
+  }
+
+  p,
+  li {
+    @include p1;
+  }
+
+  a {
+    color: $green;
+    text-decoration: none;
+
+    &:visited {
+      color: $green;
+    }
+
+    &:hover {
+      font-style: italic;
+    }
+  }
+
+  img {
+    display: block;
+    max-width: 100%;
+    width: auto !important;
+    height: auto !important;
+  }
+
+  ul,
+  ol {
+    margin: r(20) 0 r(30);
+
+    img {
+      display: inline-block;
+      margin: 0;
+      vertical-align: middle;
+      border-radius: 0;
+    }
+  }
+
+  li {
+    &:not(:last-child) {
+      margin-bottom: r(20);
+    }
+
+    &::marker {
+      color: $black;
+    }
+  }
+
+  ul {
+    padding-left: r(20);
+    list-style: none;
+
+    li {
+      position: relative;
+
+      &::before {
+        content: "";
+        width: r(5);
+        height: r(6);
+        position: absolute;
+        left: r(-16);
+        top: r(10);
+        background: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNSIgaGVpZ2h0PSI2IiB2aWV3Qm94PSIwIDAgNSA2IiBmaWxsPSJub25lIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPgo8Y2lyY2xlIGN4PSIyLjUiIGN5PSIzIiByPSIyLjUiIGZpbGw9IiM3NjgyNTQiLz4KPC9zdmc+Cg==");
+        background-repeat: no-repeat;
+      }
+    }
+  }
+
+  ol {
+    padding-left: r(24);
+    list-style: decimal outside;
+  }
+
+  .table {
+    overflow: auto;
+  }
+
+  table {
+    min-width: 100%;
+    border: 0;
+    border-spacing: 0;
+    border-collapse: collapse;
+    overflow: hidden;
+    border-bottom: 1px solid rgba(76, 78, 72, 0.2) !important;
+    td,
+    th {
+      padding:clampFluid(10,19) 0;
+      font-size: r(18);
+      line-height: 1.4;
+      border-bottom: 1px solid rgba(76, 78, 72, 0.2);
+      background: #fff;
+      @include p1;
+
+      &:first-child {
+        border-left: 0;
+      }
+
+      &:last-child {
+        border-right: 0;
+      }
+    }
+
+    tr {
+      &:first-child {
+        td {
+          @include h3;
+        }
+      }
+
+      &:last-child {
+        td {
+          border-bottom: 0;
+        }
+      }
+    }
+  }
+
+  > :first-child {
+    margin-top: 0;
+  }
+
+  > :last-child {
+    margin-bottom: 0;
+  }
+}

@@ -1,0 +1,46 @@
+{
+  "name": "webpack",
+  "version": "1.0.0",
+  "description": "",
+  "private": "true",
+  "scripts": {
+    "build": "cross-env NODE_ENV=production node ./bin/dev.js",
+    "dev": "cross-env NODE_ENV=development node ./bin/dev.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/alpinejs": "^3.13.6",
+    "@types/lodash": "^4.14.202",
+    "@types/lodash-es": "^4.17.12",
+    "@yandex/ymaps3-types": "^0.0.21",
+    "chokidar": "^3.6.0",
+    "cross-env": "^7.0.3",
+    "css-loader": "^6.10.0",
+    "lodash": "^4.17.21",
+    "mini-css-extract-plugin": "^2.8.0",
+    "node-notifier": "^10.0.1",
+    "sass": "^1.71.0",
+    "sass-loader": "^14.1.0",
+    "sharp": "^0.33.2",
+    "style-loader": "^3.3.4",
+    "svgo": "^3.2.0",
+    "svgstore": "^3.0.1",
+    "swc-loader": "^0.2.6",
+    "typescript": "^5.3.3",
+    "webpack": "^5.90.2",
+    "webpack-cli": "^5.1.4",
+    "webpack-manifest-plugin": "^5.0.0"
+  },
+  "dependencies": {
+    "@fancyapps/ui": "^5.0.33",
+    "alpinejs": "^3.13.3",
+    "htmx.org": "^1.9.10",
+    "maska": "^2.1.11",
+    "micromodal": "^0.4.10",
+    "swiper": "^11.0.6"
+  },
+  "browserslist": "> 0.9%, last 4 versions, iOS 14, not dead",
+  "prettier": {}
+}

@@ -1,0 +1,291 @@
+.room-card {
+    position: relative;
+    // width: clampFluid(566);
+    width: 32.5%;
+    border-radius: 8px;
+    border: 1px solid $gray;
+    transition: $transition-fast;
+    $this: &;
+
+    @media (max-width: 1280px) {
+        // width: clampFluid(200, 566, 425, 1280);
+        width: 49%;
+    }
+
+    @media (max-width: 800px) {
+        width: 100%;
+    }
+
+
+
+    &:hover {
+        p {
+            transform: skewX(0);
+        }
+
+        border-color: $green;
+
+        #{$this}__more {
+            p {
+                transform: skewX(-10deg);
+                color: $green;
+            }
+        }
+
+        #{$this}__more-circle {
+            border-color: $green;
+            background: transparent;
+            transition: $transition-fast;
+
+            svg {
+                stroke: $green;
+            }
+        }
+    }
+
+    &__info {
+        padding: clampFluid(10, 20);
+        display: flex;
+        flex-direction: column;
+
+        @media (max-width: 600px) {
+            padding: 12px 10px;
+        }
+
+    }
+
+    &__info-top {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        margin-bottom: clampFluid(20);
+    }
+
+    &__name {
+        @include h3;
+    }
+
+    &__proops {
+        display: flex;
+        gap: clampFluid(8, 20);
+    }
+
+    &__proops-elem {
+        display: flex;
+        align-items: center;
+        position: relative;
+
+        p {
+            @include p2;
+
+            sup {
+                position: absolute;
+                top: 0;
+                right: 0;
+                @include p2;
+                font-size: 10px !important;
+                top: -5px;
+                right: -5px;
+                font-weight: 600 !important;
+            }
+        }
+    }
+
+    &__proops-icon {
+        width: clampFluid(15, 24);
+        height: clampFluid(15, 24);
+        margin-right: clampFluid(2, 5);
+        fill: transparent;
+    }
+
+    &__info-bottom {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+    }
+
+    &__price {
+        p {
+            @include p2;
+            font-size: clampFluid(18);
+            line-height: clampFluid(23);
+
+            span {
+                font-weight: 700;
+                font-size: clampFluid(24);
+                line-height: clampFluid(31);
+            }
+        }
+    }
+
+    &__more {
+        display: flex;
+        align-items: center;
+
+        p {
+            @include p1;
+        }
+    }
+
+    &__more-circle {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-left: clampFluid(7, 14);
+        width: clampFluid(48);
+        height: clampFluid(26);
+        border: 1px solid $green;
+        background: $black;
+        border-radius: 30px;
+
+        svg {
+            width: clampFluid(17);
+            height: clampFluid(11);
+            stroke: white;
+        }
+    }
+
+}
+
+.room-form {
+    width: 32.5%;
+    border-radius: 8px;
+    transition: $transition-fast;
+    $this: &;
+    background: $green;
+    position: relative;
+    padding: clampFluid(48) clampFluid(55) clampFluid(33) clampFluid(48);
+
+    @media (max-width: 1280px) {
+        width: 49%;
+    }
+
+    @media (max-width: 800px) {
+        width: 100%;
+    }
+
+    &__text-discount {
+        @include h1;
+        color: white;
+    }
+
+    &__bg-text {
+        position: absolute;
+        left: 0;
+        top: clampFluid(37);
+
+        @media (max-width: 1200px) {
+            top: -5px;
+            margin-left: 0;
+        }
+
+        p {
+            opacity: 10%;
+            @include h2;
+            color: white;
+            font-size: clampFluid(160, 216);
+            line-height: clampFluid(100, 280);
+
+            @media (max-width: 1200px) {
+                font-size: 114px;
+                line-height: 148px;
+            }
+        }
+    }
+
+    &__policy {
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        @include p2;
+        color: rgba(255, 255, 255, 0.7);
+
+        a {
+            text-decoration: underline 1px solid white;
+            text-underline-offset: 4px;
+        }
+
+        &:hover {
+            a {
+                text-decoration: underline 1px wavy white;
+                text-decoration-skip-ink: none;
+                transform: skew(-10deg);
+                color: white;
+            }
+        }
+
+        @media (max-width: 1200px) {
+            margin-left: 0;
+            text-align: center;
+
+            a {
+                display: block;
+            }
+        }
+    }
+
+    &__descr {
+        @include p1;
+        color: white;
+        margin-bottom: clampFluid(43);
+
+        @media (max-width: 1200px) {
+            text-align: center;
+            margin-bottom: 27px;
+        }
+    }
+
+    &__form {
+        gap: clampFluid(20);
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+
+        .preloader {
+            opacity: 0;
+        }
+
+        &.sending {
+            .preloader {
+                opacity: 1;
+            }
+
+            .btn-right-arr__circle {
+                opacity: 0
+            }
+        }
+
+        @media (max-width: 1200px) {
+
+            gap: 14px;
+            margin-bottom: 33px;
+        }
+    }
+
+    &__input {
+        width: 100%;
+    }
+
+    &__submit {
+        justify-content: center;
+        margin-top: clampFluid(25);
+        margin-bottom: clampFluid(41);
+        position: relative;
+
+        @media (max-width: 768px) {
+            margin-bottom: 0;
+        }
+
+    }
+
+    .error-text {
+        top: clampFluid(-20);
+    }
+
+    .preloader {
+        right: unset;
+        margin-left: clampFluid(190);
+    }
+}

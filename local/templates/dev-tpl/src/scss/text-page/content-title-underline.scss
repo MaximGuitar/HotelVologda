@@ -1,0 +1,13 @@
+.content-title-underline {
+  margin-bottom: r(40);
+  padding-bottom: r(12);
+  border-bottom: 2px solid $black;
+}
+
+@media (max-width: 1279px) {
+  .content-title-underline {
+    padding-bottom: r(10);
+    margin-bottom: r(20);
+    font-size: r(22);
+  }
+}

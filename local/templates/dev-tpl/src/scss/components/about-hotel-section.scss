@@ -1,0 +1,126 @@
+.about-hotel-section {
+    margin-bottom: clampFluid(170);
+    $this: &;
+
+    @media (max-width: 1024px) {
+        margin-bottom: 50px;
+    }
+
+
+    &__top {
+        padding-bottom: clampFluid(148);
+        background: $green-bg;
+
+        @media (max-width: 1024px) {
+            padding-top: clampFluid(110,74,320,1024);
+        }
+
+    }
+
+    &__top-content {
+        width: clampFluid(935);
+        margin: 0 auto;
+
+        @media (max-width: 1024px) {
+            width: auto;
+        }
+    }
+
+    &__title {
+        @include h1;
+        margin-bottom: clampFluid(54);
+        text-align: center;
+    }
+
+    &__descr {
+        @include h3-long;
+        text-align: center;
+        margin-bottom: clampFluid(75);
+    }
+
+    &__top-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    &__bottom {
+        display: flex;
+        padding-left: clampFluid(91);
+
+        @media (max-width: 1024px) {
+            flex-wrap: wrap;
+            gap: 15px;
+            margin-top: 30px;
+            margin-right: 0;
+            padding-right: clampFluid(15, 30, 320, 1024);
+            padding-left: clampFluid(15, 30, 320, 1024);
+        }
+
+    }
+
+    &__bottom-text1 {
+        width: clampFluid(456);
+        margin-top: clampFluid(54);
+        margin-right: clampFluid(49);
+
+        p {
+            @include p1;
+            margin-bottom: clampFluid(25);
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+
+        @media (max-width: 1024px) {
+            margin-top: 0;
+            width: auto;
+            margin-right: 0;
+        }
+    }
+
+    &__bottom-text2 {
+        width: clampFluid(375);
+        margin-top: clampFluid(230);
+        margin-right: clampFluid(131);
+
+        p {
+            @include p1;
+            margin-bottom: clampFluid(20);
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+
+        @media (max-width: 1024px) {
+            margin-top: 0;
+            width: auto;
+            margin-right: 0;
+        }
+    }
+
+    &__bottom-img {
+        position: relative;
+        height: clampFluid(486);
+        width: clampFluid(819);
+        margin-top: clampFluid(-80);
+
+        img {
+            object-fit: cover;
+            border-radius: 8px;
+            width: 100%;
+        }
+
+        @media (max-width: 1024px) {
+            margin-top: 0;
+        }
+
+        @media (max-width: 560px) {
+            width: 100%;
+            height: auto;
+        }
+    }
+}

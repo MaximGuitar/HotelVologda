@@ -1,0 +1,26 @@
+.quote-block {
+    padding: clampFluid(60, 130) 0 clampFluid(60, 147);
+
+    &__text {
+        width: clampFluid(1145);
+
+        @media (max-width: 1280px) {
+            width: 100%;
+        }
+
+        margin: 0 auto;
+
+        p {
+            @include h3-long;
+            text-align: center;
+
+            span {
+                text-decoration: underline wavy 2px #768254;
+                text-underline-offset: 2px;
+                text-decoration-color: #768254;
+                -webkit-text-decoration-color: #768254;
+                text-decoration-skip-ink: none;
+            }
+        }
+    }
+}

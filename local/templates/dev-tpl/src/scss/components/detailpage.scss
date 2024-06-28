@@ -1,0 +1,25 @@
+.detail-page{
+    &__title{
+        @include h1;
+    }
+}
+.detail-container{
+    width: clampFluid(1442);
+    max-width: 1442px;
+    margin: 0 auto;
+    padding: 0;
+  
+    @media (max-width: 1280px) {
+      width: 100%;
+      padding: 0 clampFluid(10, 30, 320, 1280);
+    }
+}
+.text-col{
+    p{
+        @include p1;
+        margin-bottom: clampFluid(5,10);
+        &:last-child{
+            margin-bottom: 0;
+        }
+    }
+}

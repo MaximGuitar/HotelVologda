@@ -1,0 +1,104 @@
+.whereAreWe {
+    margin-bottom: clampFluid(64, 122);
+
+    .footer__contacts {
+        margin-bottom: clampFluid(15, 40);
+    }
+
+    &__top {
+        display: flex;
+        margin-bottom: clampFluid(14, 63);
+
+        &--contacts {
+            margin-bottom: clampFluid(15, 40);
+        }
+    }
+
+    &__yandex-nav {
+        margin-left: auto;
+        margin-bottom: clampFluid(30);
+
+        p {
+            color: rgba(76, 78, 72, 0.7);
+            @include p1;
+            font-size: clampFluid(20) !important;
+        }
+
+        .img-container {
+            width: clampFluid(36, 50);
+            height: clampFluid(36, 50);
+        }
+
+        &--mob {
+            display: none;
+            justify-content: start;
+            margin: 42px auto 0;
+            justify-content: center;
+
+            @media (max-width: 425px) {
+                display: flex;
+            }
+        }
+
+        &--desk {
+            display: flex;
+
+            @media (max-width: 426px) {
+                display: none;
+            }
+        }
+    }
+
+
+    &__title {
+        @include h1;
+        max-width: clampFluid(320, 530);
+    }
+
+    &__list {
+        height: clampFluid(843);
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 21px 23px;
+
+        @media (max-width: 768px) {
+            grid-template-columns: 1fr;
+            height: 100%;
+        }
+
+        img {
+            border-radius: 8px;
+            object-fit: cover;
+        }
+    }
+
+    &__map-container {
+        grid-column: 1/2;
+        grid-row: 1/3;
+
+        @media (max-width: 768px) {
+            grid-column: 1/2;
+            grid-row: 1/2;
+        }
+    }
+
+    &__img1-container {
+        grid-column: 2/3;
+        grid-row: 1/2;
+
+        @media (max-width: 768px) {
+            grid-column: 1/2;
+            grid-row: 2/3;
+        }
+    }
+
+    &__img2-container {
+        grid-column: 2/3;
+        grid-row: 2/3;
+
+        @media (max-width: 768px) {
+            grid-column: 1/2;
+            grid-row: 3/4;
+        }
+    }
+}

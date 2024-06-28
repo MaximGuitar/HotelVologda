@@ -1,0 +1,115 @@
+.about-hotel {
+    margin-bottom: clampFluid(93);
+    margin-right: clampFluid(89);
+
+    @media (max-width: 1280px) {
+        margin-right: 0;
+    }
+
+    @media (max-width: 600px) {
+        margin-bottom: 62px;
+    }
+
+    &__cont {
+        display: grid;
+        grid-template-columns: clampFluid(819) auto;
+        gap: clampFluid(90);
+
+        @media (max-width: 1280px) {
+            grid-template-columns: 1fr;
+        }
+
+        @media (max-width: 600px) {
+            gap: 30px;
+        }
+    }
+
+    &__img-container {
+        width: clampFluid(819);
+
+        img {
+            border-radius: 8px;
+            object-fit: cover;
+        }
+
+        @media (max-width: 1280px) {
+            margin: 0 auto;
+        }
+
+        @media (max-width: 600px) {
+            width: 100%;
+
+            img {
+                margin-right: 10px;
+            }
+        }
+    }
+
+    &__title {
+        @include h1;
+        margin-bottom: clampFluid(60);
+
+        @media (max-width: 600px) {
+            margin-bottom: 12px;
+        }
+    }
+
+    &__texts {
+        display: grid;
+        grid-template-columns: clampFluid(455) clampFluid(387);
+        @include p1;
+        gap: clampFluid(79);
+
+        @media (max-width: 1280px) {
+            grid-template-columns: 1fr 1fr;
+        }
+
+        @media (max-width: 600px) {
+            grid-template-columns: 1fr;
+        }
+
+        p,
+        span {
+            @include p1;
+        }
+
+        span {
+            text-decoration: underline wavy 2px #768254;
+            text-underline-offset: 2px;
+            text-decoration-color: #768254;
+            -webkit-text-decoration-color: #768254;
+            text-decoration-skip-ink: none;
+        }
+
+        @media (max-width: 600px) {
+            gap: 42px;
+        }
+    }
+
+    &__texts-right {
+        gap: 20px;
+        display: flex;
+        flex-direction: column;
+
+        @media (max-width: 600px) {
+            gap: 12px;
+        }
+    }
+
+    &__info {
+        justify-content: center;
+        flex-direction: column;
+        display: flex;
+
+        @media (max-width: 1280px) {
+            width: 100%;
+            padding: 0 clampFluid(10, 30, 320, 1280);
+        }
+    }
+
+    &__read-all {
+        @media (max-width: 600px) {
+            margin-top: 23px;
+        }
+    }
+}

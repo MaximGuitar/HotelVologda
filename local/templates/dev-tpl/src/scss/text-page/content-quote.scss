@@ -1,0 +1,17 @@
+.content-quote {
+  margin-bottom: clampFluid(30,160) !important; 
+  &__block {
+    border-left: 3px solid $green;
+    padding-left: clampFluid(10, 50);
+  }
+
+  &__text {
+    @include h3-long;
+    margin-bottom: clampFluid(15, 40);
+  }
+
+  &__fio{
+    @include p1;
+    color: rgba(159, 160, 156, 1);
+  }
+}

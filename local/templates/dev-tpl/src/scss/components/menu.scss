@@ -1,0 +1,111 @@
+.menu {
+    margin-bottom: clampFluid(120);
+
+    &__top {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: clampFluid(40);
+    }
+
+    &__title {
+        p {
+            @include h1;
+        }
+    }
+
+    &__download-pdf {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        p {
+            @include p1;
+            color: rgba(76, 78, 72, 0.7);
+            margin-right: clampFluid(14);
+            width: fit-content;
+            text-wrap: balance;
+
+            @media (max-width: 491px) {
+                width: clampFluid(100,120,320,491);
+            }
+
+        }
+
+        svg {
+            width: clampFluid(51);
+            height: clampFluid(51);
+            fill: $green;
+            stroke: white;
+        }
+    }
+
+    &__bg-img {
+        position: absolute;
+        object-fit: cover;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+    }
+
+    &__wrapper {
+        position: relative;
+    }
+
+    &__elems {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: clampFluid(20);
+
+        @media (max-width: 1024px) {
+            grid-template-columns: repeat(3, 1fr);
+        }
+
+        @media (max-width: 768px) {
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+
+    &__photo {
+        height: clampFluid(300, 594);
+        position: relative;
+        border-radius: 8px;
+        overflow: hidden;
+
+        @media (max-width: 768px) {
+            height: auto;
+        }
+
+        &:hover {
+            .menu__bg {
+                opacity: 1;
+            }
+        }
+    }
+
+    &__img {
+        border-radius: 8px;
+        object-fit: cover;
+    }
+
+    &__bg {
+        background: rgba(7, 10, 12, 0.55);
+        position: absolute;
+        top: 0;
+        left: 0;
+        transition: $transition-fast;
+        width: 100%;
+        height: 100%;
+        opacity: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        svg {
+            width: clampFluid(38);
+            height: clampFluid(38);
+        }
+    }
+}

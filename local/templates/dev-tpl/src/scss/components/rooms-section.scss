@@ -1,0 +1,9 @@
+.rooms-section {
+    margin-bottom: clampFluid(202);
+    &__elems {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: left;
+        gap: clampFluid(31) clampFluid(21);
+    }
+}
